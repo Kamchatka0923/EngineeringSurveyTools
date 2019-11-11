@@ -7,8 +7,8 @@
     <ProjectGuid>{2E82D970-03B9-45E7-875A-19E70EFC1CD7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SurveyTools</RootNamespace>
-    <AssemblyName>SurveyTools</AssemblyName>
+    <RootNamespace>EngineeringSurveyTools</RootNamespace>
+    <AssemblyName>EngineeringSurveyTools</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\SurveyTools.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\EngineeringSurveyTools.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,9 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CMatrix.cs" />
-    <Compile Include="CPolygon.cs" />
-    <Compile Include="CommonTools.cs" />
+    <Compile Include="SurveyTools\CMatrix.cs" />
+    <Compile Include="SurveyTools\CPolygon.cs" />
+    <Compile Include="SurveyTools\CommonTools.cs" />
+    <Compile Include="CurveCalculate\BrokenChainage.cs" />
+    <Compile Include="CurveCalculate\Curve.cs" />
+    <Compile Include="CurveCalculate\HCurve_JD.cs" />
+    <Compile Include="CurveCalculate\HCurve_LE.cs" />
+    <Compile Include="CurveCalculate\Horizontal_JD.cs" />
+    <Compile Include="CurveCalculate\Horizontal_LE.cs" />
+    <Compile Include="CurveCalculate\Milleage.cs" />
+    <Compile Include="CurveCalculate\VCurve_LE.cs" />
+    <Compile Include="CurveCalculate\Vertical_LE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

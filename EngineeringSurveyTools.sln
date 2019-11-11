@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyTools", "SurveyTools.csproj", "{2E82D970-03B9-45E7-875A-19E70EFC1CD7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurveCalculate", "..\CurveCalculate\CurveCalculate.csproj", "{9ED31AC5-08D8-4FAF-87A1-BC3F8AA25C0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EngineeringSurveyTools", "EngineeringSurveyTools.csproj", "{2E82D970-03B9-45E7-875A-19E70EFC1CD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{2E82D970-03B9-45E7-875A-19E70EFC1CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E82D970-03B9-45E7-875A-19E70EFC1CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E82D970-03B9-45E7-875A-19E70EFC1CD7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9ED31AC5-08D8-4FAF-87A1-BC3F8AA25C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9ED31AC5-08D8-4FAF-87A1-BC3F8AA25C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9ED31AC5-08D8-4FAF-87A1-BC3F8AA25C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9ED31AC5-08D8-4FAF-87A1-BC3F8AA25C0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
