@@ -57,6 +57,7 @@ namespace EngineeringSurveyTools.CurveCalculate
             HCurve_JD hc = new HCurve_JD(K, X, Y, A, alpha, Ls, R);
             HorizontalJD.Add(hc);
             HorizontalJD.ToLE(out Horizontal_LE LE);
+            Horizontal.curves.Clear();
             foreach(var hcle in LE.curves)
             {
                 HK.AddHa(hcle.K0, hcle.K1, hcle.L);

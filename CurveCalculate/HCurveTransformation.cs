@@ -36,6 +36,7 @@ namespace EngineeringSurveyTools.CurveCalculate
             HCurve_JD hc = new HCurve_JD(K, X, Y, A, alpha, Ls, R);
             JDs.Add(hc);
             JDs.ToLE(out Horizontal_LE LE);
+            LEs.curves.Clear();
             foreach (var hcle in LE.curves)
             {
                 HCurve_LE le1 = new HCurve_LE(hcle.type, hcle.K0, hcle.azimuth, hcle.x0, hcle.y0, hcle.R, hcle.L);
