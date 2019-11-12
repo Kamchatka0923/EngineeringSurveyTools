@@ -58,6 +58,8 @@ namespace EngineeringSurveyTools.CurveCalculate
                 LE[i, 3] = LEs.curves[i].x0;
                 LE[i, 4] = LEs.curves[i].y0;
                 LE[i, 5] = LEs.curves[i].R;
+                if (LEs.curves[i].R == double.MaxValue)
+                    LE[i, 5] = 0;
                 LE[i, 6] = LEs.curves[i].L;
             }
             return LE;

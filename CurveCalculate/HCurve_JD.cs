@@ -69,7 +69,7 @@ namespace EngineeringSurveyTools.CurveCalculate
                 Yyh = ZD[2, 1];
                 Xhz = ZD[3, 0];
                 Yhz = ZD[3, 1];
-                double ksi = (azimuth > 0) ? 1 : -1;
+                double ksi = (alpha > 0) ? 1 : -1;
                 Ahy = azimuth + ksi * Ls / (2 * R);
                 Ayh = azimuth + alpha - ksi * Ls / (2 * R);
             }
