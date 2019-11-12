@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace EngineeringSurveyTools.CurveCalculate
 {
+    /// <summary>
+    /// 道路曲线
+    /// </summary>
     public class Curve
     {
         private Horizontal_LE Horizontal;

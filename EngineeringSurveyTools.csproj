@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CurveCalculate\HCurveTransformation.cs" />
     <Compile Include="SurveyTools\CMatrix.cs" />
     <Compile Include="SurveyTools\CPolygon.cs" />
     <Compile Include="SurveyTools\CommonTools.cs" />
