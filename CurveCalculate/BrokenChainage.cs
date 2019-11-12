@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EngineeringSurveyTools.CurveCalculate
 {
@@ -33,8 +29,7 @@ namespace EngineeringSurveyTools.CurveCalculate
         /// <param name="pre">断链前冠号</param>
         /// <param name="suf">断链后冠号</param>
         /// <param name="name">断链点名</param>
-        public BrokenChainage(int type,double bK,double aK,
-            string pre,string suf,string name="")
+        public BrokenChainage(int type, double bK, double aK, string pre, string suf, string name = "")
         {
             if (bK < 0 || aK < 0)
                 throw new Exception("BrokenChainage:BrokenChainage:断链里程为负值");
@@ -48,7 +43,5 @@ namespace EngineeringSurveyTools.CurveCalculate
             prefix = pre;
             suffix = suf;
         }
-
-
     }
 }
