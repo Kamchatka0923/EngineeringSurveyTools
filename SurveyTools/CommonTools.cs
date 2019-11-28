@@ -390,6 +390,56 @@ namespace EngineeringSurveyTools.SurveyTools
             h_ab = D * Math.Tan(alpha) + i - v + f;
             Hb = Ha + h_ab;
         }
+        /// <summary>
+        /// 最小二乘直线拟合
+        /// </summary>
+        /// <param name="xy">需要拟合的平面坐标</param>
+        /// <param name="k">拟合直线方程斜率</param>
+        /// <param name="b">拟合直线方程截距</param>
+        public static void LSFit(double[,] xy,out double k,out double b)
+        {
+            CMatrix A = new CMatrix(xy.Length / 2, 2);
+            CMatrix X = new CMatrix(2, 1);
+            CMatrix L = new CMatrix(xy.Length / 2, 1);
+            for(int i=0;i<xy.Length/2;i++)
+            {
+                A[i, 0] = 1;
+                A[i, 1] = xy[i, 0];
+                L[i, 0] = xy[i, 1];
+            }
+            //求最小二乘解
+            CMatrix N = new CMatrix();
+            N = A.Translocation() * A;
+            X = N.Inv() * A.Translocation() * L;
+
+            b = X[0, 0];
+            k = X[1, 0];
+        }
+        /// <summary>
+        /// 多项式最小二乘曲线拟合
+        /// </summary>
+        /// <param name="n">拟合多项式的最高次数</param>
+        /// <param name="xy">需要拟合的平面坐标</param>
+        /// <param name="X">拟合参数矩阵</param>
+        public static void CurveFit(int n,double[,] xy, out CMatrix X)
+        {
+            CMatrix Error = new CMatrix(1, 1);
+            if (xy.Length == 0)
+                X = Error;
+            if (n < 1)
+                X = Error;
+            CMatrix A = new CMatrix(xy.Length / 2, n + 1);
+            X = new CMatrix(n + 1, 1);
+            CMatrix L = new CMatrix(xy.Length / 2, 1);
+            for (int i = 0; i < xy.Length / 2; i++)
+            {
+                for (int j = 0; j < n + 1; j++)
+                    A[i, j] = Math.Pow(xy[i, 0], j);
+                L[i, 0] = xy[i, 1];
+            }
+            CMatrix N = A.Translocation() * A;
+            X = N.Inv() * A.Translocation() * L;
+        }
         #endregion
 
         #region 线路平纵计算工具
@@ -1384,6 +1434,7 @@ namespace EngineeringSurveyTools.SurveyTools
             return PointTarget;
         }
         #endregion
+
 
     }
 }
